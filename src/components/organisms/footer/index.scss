@@ -1,0 +1,141 @@
+$COLORS: (
+  mainTheme: rgba(60, 61, 61, 1)
+    // Define your main theme color here,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+);
+.footer {
+  height: 100%;
+
+  &__backdrop {
+    height: 300px;
+    background: linear-gradient(
+      121.05deg,
+      rgba(237, 50, 24, 0.5) 31.21%,
+      rgba(250, 125, 11, 0.5) 38.66%,
+      rgba(0, 53, 255, 0.5) 80.52%,
+      rgba(42, 3, 66, 0.5) 102.15%
+    );
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 20%;
+    }
+  }
+  &__wrapper {
+    background-color: map-get($COLORS, mainTheme);
+    padding: 50px 50px;
+    color: #fff;
+    .footer__content {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 100px;
+      &__left {
+        width: 50%;
+        & > * {
+          padding: 20px 0;
+        }
+        &__logo {
+          img {
+            width: 200px;
+            height: 90px;
+          }
+        }
+      }
+      &__right {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+        &__item {
+          ul {
+            list-style: none;
+            li {
+              padding: 8px 0;
+              font-size: 16px;
+              font-weight: 200;
+              a {
+                text-decoration: none;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer__references {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 100px;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 10px;
+      &__left {
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+        width: 50%;
+        margin-top: 10px;
+        &__wrapper {
+          background-color: #fff;
+          width: 60%;
+          display: flex;
+          &__input {
+            flex: 2;
+            border: none;
+            padding: 10px 10px;
+            outline: none;
+          }
+          &--btn {
+            background-color: #fa7d0b;
+            border: none;
+            padding: 10px 20px;
+          }
+        }
+      }
+      &__right {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        padding: 0 30px;
+        &__address {
+          ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            li {
+              padding: 8px 0;
+              font-size: 16px;
+              font-weight: 200;
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              .footer-icon {
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        &__contact {
+          &__wrapper {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 800;
+            color: #fa7d0b;
+          }
+        }
+      }
+    }
+  }
+}
+.inner-button {
+  padding: 6px 11px;
+  background: #fa7d0b;
+  border: none;
+}

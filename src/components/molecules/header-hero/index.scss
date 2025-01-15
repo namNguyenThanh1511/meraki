@@ -1,0 +1,53 @@
+.navbar {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  &__dropdown {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__container {
+    flex: 2;
+
+    .navbar__items {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 50px;
+      list-style: none;
+      &__item {
+        a {
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 400;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &__actions {
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    & > * {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      span {
+        display: flex;
+      }
+    }
+    &__avatar {
+      padding-right: 20px;
+      border-right: 1px solid #fff;
+    }
+  }
+}
