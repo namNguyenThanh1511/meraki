@@ -1,7 +1,6 @@
 import { FaSearch } from "react-icons/fa";
 import InputComponent from "../../atoms/input";
 import Hero from "../../molecules/header-hero";
-import SideBarHeader from "../../molecules/sidebar-header";
 import "./index.scss";
 import { mainLogo } from "../../../assets/constant";
 import { IoLocationOutline } from "react-icons/io5";

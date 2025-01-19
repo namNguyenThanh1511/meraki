@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./index.scss";
-import ProductCard from "../../card";
 import Carousel from "../../swiper/carousel";
 import mockProductCardTypeData from "../../../../mock/mockProductCardTypeData";
 import { ProductCardType } from "../../../../model/product";

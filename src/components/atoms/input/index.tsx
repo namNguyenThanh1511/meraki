@@ -1,5 +1,6 @@
 import { Input, InputProps } from "antd";
 import "./index.scss";
+import { CSSProperties } from "react";
 
 interface InputComponentProps extends InputProps {
   className?: string;
@@ -19,20 +20,21 @@ function InputComponent({
   width,
   height,
   borderColor,
-  onInnerButtonTxt,
   ...rest
 }: InputComponentProps) {
   return (
     <Input
       className={`input-fodoshi ${className}`}
       {...rest}
-      style={{
-        "--bg-color": bgColor,
-        "--border-radius": shape === "primary" ? "6px" : shape === "round" ? "15px" : "0px",
-        "--width": width,
-        "--height": height,
-        "--border-color": borderColor,
-      }}
+      style={
+        {
+          "--bg-color": bgColor,
+          "--border-radius": shape === "primary" ? "6px" : shape === "round" ? "15px" : "0px",
+          "--width": width,
+          "--height": height,
+          "--border-color": borderColor,
+        } as CSSProperties
+      }
     />
   );
 }
@@ -49,12 +51,14 @@ InputComponent.Password = ({
   <Input.Password
     className={`input-fodoshi ${className}`}
     {...rest}
-    style={{
-      "--bg-color": bgColor,
-      "--border-radius": shape === "primary" ? "6px" : "15px",
-      "--width": width,
-      "--height": height,
-    }}
+    style={
+      {
+        "--bg-color": bgColor,
+        "--border-radius": shape === "primary" ? "6px" : "15px",
+        "--width": width,
+        "--height": height,
+      } as CSSProperties
+    }
   />
 );
 

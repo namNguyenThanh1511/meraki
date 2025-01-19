@@ -1,10 +1,6 @@
-import { FaFacebook } from "react-icons/fa6";
-import { SlSocialInstagram } from "react-icons/sl";
-import { AiFillTwitterCircle } from "react-icons/ai";
 import "./index.scss";
 import { mainFooterBackdrop, mainLogo } from "../../../assets/constant";
 import { Link } from "react-router-dom";
-import InputComponent from "../../atoms/input";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
 import { CiPhone } from "react-icons/ci";

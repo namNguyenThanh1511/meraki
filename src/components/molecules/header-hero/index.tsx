@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./index.scss";
 import { navbar } from "../../../assets/constant";
-import { CiUser } from "react-icons/ci";
 import { LuShoppingCart } from "react-icons/lu";
 import { UserOutlined } from "@ant-design/icons";
 function Hero() {

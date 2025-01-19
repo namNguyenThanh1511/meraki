@@ -1,6 +1,4 @@
-import React from "react";
 import "./index.scss";
-import { featureOne } from "../../../assets/constant";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { IoShareSocial, IoShareSocialOutline } from "react-icons/io5";
 import { MdOutlineZoomInMap, MdOutlineZoomOutMap } from "react-icons/md";

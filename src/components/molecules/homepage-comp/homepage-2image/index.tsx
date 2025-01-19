@@ -1,5 +1,3 @@
-import { Col, Row } from "antd";
-import React from "react";
 import { twoImageBadmintonImg, twoImageBasketImg } from "../../../../assets/constant";
 import "./index.scss";
 export default function Homepage2Image() {

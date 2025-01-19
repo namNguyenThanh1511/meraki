@@ -2,8 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/bundle";
+import "swiper/swiper-bundle.css";
 import ProductCard from "../../card";
 
 import { ProductCardType } from "../../../../model/product";
@@ -18,8 +17,8 @@ const Carousel = ({ items }: CarouselProps) => {
       onSwiper={(swiper) => console.log(swiper)}
     >
       {items.map((item, index) => (
-        <SwiperSlide>
-          <ProductCard key={index} item={item} />
+        <SwiperSlide key={index}>
+          <ProductCard item={item} />
         </SwiperSlide>
       ))}
     </Swiper>

@@ -1,4 +1,3 @@
-import React from "react";
 import HomePageBanner from "../../molecules/homepage-comp/homepage-banner";
 import HomepageBrands from "../../molecules/homepage-comp/homepage-brands";
 import Homepage2Image from "../../molecules/homepage-comp/homepage-2image";

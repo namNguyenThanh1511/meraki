@@ -1,5 +1,4 @@
-import React from "react";
-import { banner, bannerShoes, tennisbanner } from "../../../../assets/constant";
+import { bannerShoes, tennisbanner } from "../../../../assets/constant";
 import "./index.scss";
 import ButtonComponent from "../../../atoms/button";
 export default function HomePageBanner() {
@@ -15,7 +14,13 @@ export default function HomePageBanner() {
               Welcome to Your Ultimate Destination for Gently Used Sporting Excellence – Where the
               Game Never Ends, and the Savings Are Endless!
             </p>
-            <ButtonComponent textColour="" width={"150px"} height={"45px"} shape="square" bgColour="#FA7D0B">
+            <ButtonComponent
+              textColour=""
+              width={"150px"}
+              height={"45px"}
+              shape="square"
+              bgColour="#FA7D0B"
+            >
               Shop Now
             </ButtonComponent>
           </div>
