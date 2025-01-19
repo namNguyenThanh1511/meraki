@@ -1,0 +1,121 @@
+.product-card {
+  margin: 10px 0px;
+  width: 220px;
+  height: fit-content;
+  //   background-color: red;
+  &__backdrop {
+    position: relative;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: all 1s;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+      .product-card__actions {
+        visibility: visible;
+      }
+      .product-card__add-to-cart {
+        z-index: 3;
+        top: 250px;
+      }
+    }
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 140%);
+      z-index: 1;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__add-to-cart {
+    width: 100%;
+    height: fit-content;
+    background-color: #3e3e3ee5;
+    color: #fff;
+    position: absolute;
+    top: 350px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    cursor: pointer;
+    transition: all 1s;
+  }
+  &__saleoff {
+    width: fit-content;
+    height: fit-content;
+    background-color: #fa7d0b;
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px 15px;
+    &--disabled {
+      display: none;
+    }
+  }
+  &__actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    visibility: hidden;
+    &__item {
+      width: 100%;
+      background-color: #fff;
+      padding: 5px;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+  &__info {
+    &__title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: left;
+      color: #fa7d0b;
+    }
+    &__name {
+      font-size: 20px;
+      font-weight: 800;
+      text-align: left;
+      min-height: 40px;
+    }
+    &__price {
+      display: none;
+      &--discounted {
+        display: block;
+        opacity: 0.4;
+        text-decoration: line-through;
+      }
+    }
+  }
+  &__price {
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+}

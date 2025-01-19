@@ -1,0 +1,34 @@
+.homepage__featured {
+  padding: 0 20px;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    & > * {
+      padding-bottom: 10px;
+    }
+    &__title {
+      font-size: 22px;
+      font-weight: 800;
+    }
+    &__category {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      &__item:first-child {
+        border-right: 1.5px solid #fa7d0b;
+        padding: 0px 30px;
+      }
+      &__item {
+        cursor: pointer;
+        &--active {
+          color: #fa7d0b;
+        }
+      }
+    }
+  }
+  &__items {
+    padding: 10px 0;
+  }
+}

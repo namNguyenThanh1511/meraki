@@ -1,0 +1,81 @@
+.homepage__banner {
+  //   background-color: rgb(101, 185, 201);
+  height: 500px;
+  position: relative;
+  &__background {
+    width: 100%;
+    height: 100%;
+    background: #006aff1a;
+    &__img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      object-position: 0px -350px;
+      opacity: 0.2;
+    }
+  }
+  &__content {
+    position: absolute;
+    top: 0; // Đưa nội dung vào giữa theo chiều dọc
+    left: 0; // Đưa nội dung vào giữa theo chiều ngang
+    bottom: 0;
+    right: 0;
+    // transform: translate(-50%, -50%); // Căn chỉnh chính giữa
+    color: black; // Màu chữ
+    text-align: left; // Căn giữa chữ
+    z-index: 1; // Đảm bảo nội dung nằm trên hình nền
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // gap: 100px;
+    height: 100%;
+    padding: 50px 0;
+    &__left {
+      width: 50%;
+      flex: 2;
+      padding: 0 100px;
+      h1 {
+        font-size: 60px;
+        font-weight: 1000;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+      }
+      &:nth-child(2),
+      :nth-child(3) {
+        padding: 20px 0;
+      }
+    }
+    &__right {
+      width: 50%;
+      padding: 0 100px;
+      &__sports {
+        text-align: center;
+        position: relative;
+        width: 100%;
+        height: auto;
+        text {
+          width: 100%;
+          font-size: 200px;
+          font-weight: 800;
+          line-height: 200px;
+          text-transform: uppercase;
+        }
+      }
+      &__shoe {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 50%;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__img {
+          width: 440px;
+          height: 280px;
+        }
+      }
+    }
+  }
+}
