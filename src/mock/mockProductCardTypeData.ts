@@ -82,6 +82,22 @@ const mockProductCardTypeData: ProductCardType[] = [
     price: 200,
     discount: 25,
   },
+  {
+    id: 11,
+    name: "Jordan 2 Retro High",
+    category: "Equipment",
+    imgUrl: featureTwo,
+    price: 200,
+    discount: 25,
+  },
+  {
+    id: 12,
+    name: "Jordan 3 Retro High",
+    category: "Equipment",
+    imgUrl: featureTwo,
+    price: 200,
+    discount: 25,
+  },
 ];
 
 export default mockProductCardTypeData;

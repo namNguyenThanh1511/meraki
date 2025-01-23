@@ -6,10 +6,13 @@ import "swiper/swiper-bundle.css";
 import ProductCard from "../../card";
 
 import { ProductCardType } from "../../../../model/product";
+import CardBlog from "../../card-blog";
+import { BlogCardType } from "../../../../model/blog";
 export interface CarouselProps {
-  items: ProductCardType[];
+  items: ProductCardType[] | BlogCardType[];
+  cardType?: "product" | "blog";
 }
-const Carousel = ({ items }: CarouselProps) => {
+const Carousel = ({ items, cardType }: CarouselProps) => {
   return (
     <Swiper
       slidesPerView={5}
@@ -18,7 +21,7 @@ const Carousel = ({ items }: CarouselProps) => {
     >
       {items.map((item, index) => (
         <SwiperSlide key={index}>
-          <ProductCard item={item} />
+          {cardType === "product" ? <ProductCard item={item as ProductCardType} /> : <CardBlog item={item as BlogCardType} />}
         </SwiperSlide>
       ))}
     </Swiper>

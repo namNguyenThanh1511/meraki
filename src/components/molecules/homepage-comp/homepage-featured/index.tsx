@@ -58,7 +58,7 @@ export default function HomepageFeature() {
       </div>
       <div className="homepage__featured__items">
         {/* <ProductCard /> */}
-        <Carousel items={filteredData} />
+        <Carousel cardType="product" items={filteredData} />
       </div>
     </div>
   );

@@ -16,6 +16,11 @@ import feature2 from "../../public/f2.jpg";
 import feature3 from "../../public/f3.jpg";
 import feature4 from "../../public/f4.jpg";
 import feature5 from "../../public/f5.png";
+import questionImg from "../../public/a515bb924fe7689d9a03fcf4c4f7b1b9.jpg";
+import blog1 from "../../public/blog-1.jpg";
+import blog2 from "../../public/blog-2.jpg";
+import blog3 from "../../public/blog-3.jpg";
+import blog4 from "../../public/blog-4.jpg";
 
 export const mainLogo = logoMeraki;
 export const mainFooterBackdrop = footerBackdrop;
@@ -37,6 +42,13 @@ export const featureTwo = feature2;
 export const featureThree = feature3;
 export const featureFour = feature4;
 export const featureFive = feature5;
+
+export const questionIMG = questionImg;
+
+export const blogOne = blog1;
+export const blogTwo = blog2;
+export const blogThree = blog3;
+export const blogFour = blog4;
 
 export const navbar = [
   {

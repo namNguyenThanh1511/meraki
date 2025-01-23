@@ -1,0 +1,33 @@
+.homepage__latest-update {
+  padding: 0 20px;
+  height: fit-content;
+  margin-bottom: 40px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+  }
+  &__view-all {
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    color: black;
+  }
+  &__arrow {
+    font-size: 14px;
+    color: #fa7d0b;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+}

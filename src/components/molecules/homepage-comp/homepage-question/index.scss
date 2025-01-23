@@ -1,0 +1,112 @@
+.homepage__question {
+  display: flex;
+  height: 600px;
+  padding: 20px 20px;
+  &__image {
+    width: 50%;
+    height: 100%;
+    background-color: #f5f5f5;
+    &__backdrop {
+      position: relative;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__content {
+      position: absolute;
+      top: 60px;
+      left: 80px;
+      color: #fff;
+      & > * {
+        padding: 10px 0;
+      }
+      &__title {
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: 1px;
+      }
+      //   &__description {
+      //   }
+      &__more {
+        a {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 800;
+          font-size: 24px;
+          color: black;
+          text-decoration: none;
+        }
+
+        &__arrow {
+          color: black;
+          font-size: 24px;
+        }
+        svg {
+          color: #fa7d0b;
+          display: flex;
+        }
+      }
+    }
+  }
+  &__content {
+    width: 50%;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+
+    // background-color: #f5f5f5;
+    &__title {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      flex: 1;
+    }
+    &__questions {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      &__item {
+        border-bottom: 1px solid #9c9c9c;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        position: relative;
+        &__title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          &__text {
+            font-size: 18px;
+            font-weight: 700;
+          }
+          &__collapse {
+            font-size: 18px;
+            color: #fa7d0b;
+          }
+        }
+        &__description {
+          overflow: hidden;
+          max-height: 0;
+          opacity: 0;
+          color: #3c3d3d;
+          transition: all 0.3s ease;
+          font-size: 14px;
+          font-weight: 300;
+        }
+        &.active {
+          .homepage__question__content__questions__item__description {
+            max-height: 200px; // Chiều cao lớn nhất (điều chỉnh tùy thuộc vào nội dung)
+            opacity: 1;
+            height: 100%;
+            padding: 20px 0;
+          }
+        }
+      }
+    }
+  }
+}

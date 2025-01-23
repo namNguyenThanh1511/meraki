@@ -1,0 +1,41 @@
+.homepage__bestseller {
+  padding: 0 20px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: black;
+    }
+    &__sort {
+      display: flex;
+      align-items: center;
+      margin-right: 50px;
+      .custom-border {
+        position: relative;
+      }
+      .custom-border::before {
+        content: " ";
+        position: absolute;
+        border-left: 3px #fa7d0b solid;
+        top: 0;
+        right: 0; /* Change direction for a different side*/
+        height: 100%;
+      }
+      & > * {
+        cursor: pointer;
+        padding: 0 20px;
+        font-size: 14px;
+        .active {
+          color: #fa7d0b;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
