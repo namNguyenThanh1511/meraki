@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import ProductsFrame from "../../../molecules/products-frame";
 import { RootState } from "../../../../redux/store";
 import { useDispatch, useSelector } from "react-redux";
-import { mockCartItems } from "../../../../mock/mockProductCardTypeData";
+
 import { changeQuantity, remove } from "../../../../redux/features/cartSlice";
 
 export interface CartItem {
@@ -20,7 +20,10 @@ export interface CartItem {
 const ShoppingCart: React.FC = () => {
   const cart = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch();
-  const total = cart.products.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const total = cart.products.reduce(
+    (sum: number, item: CartItem) => sum + item.price * item.quantity,
+    0
+  );
   const handleIncrement = (product: CartItem) => {
     dispatch(changeQuantity({ id: product.id, quantity: product.quantity + 1 }));
   };
@@ -51,7 +54,7 @@ const ShoppingCart: React.FC = () => {
               </tr>
             </thead>
             <tbody>
-              {cart.products.map((item) => (
+              {cart.products.map((item: CartItem) => (
                 <tr key={item.id}>
                   <td>
                     <input type="checkbox" defaultChecked />
@@ -77,7 +80,7 @@ const ShoppingCart: React.FC = () => {
                         onClick={() => {
                           handleIncrement(item);
                         }}
-w                      >
+                      >
                         +
                       </button>
                     </div>
