@@ -1,0 +1,26 @@
+.sign-up {
+  width: 100%;
+  padding: 0 240px;
+  &__title {
+    font-size: 30px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &___form {
+    margin-top: 20px;
+  }
+  .form-button-center {
+    margin-top: 20px;
+    button {
+      font-size: 20px;
+      font-weight: 800;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.product-details-wrapper {
+  padding: 0 2.625rem;
+}
+
+.product-details {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between  ;
+  height: fit-content;
+  margin: 1.5rem 0;
+
+  &__category {
+    color: #fa7d0b;
+  }
+
+  &__images {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+  }
+  &__image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__main-image {
+    width: 65%;
+    height: 100%;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+    img {
+      width: 400px;
+      height: 30.75rem;
+      object-fit: cover;
+    }
+  }
+
+  &__thumbnail-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: 35%;
+    height: 100%;
+    gap: 20px;
+  }
+
+  &__thumbnail {
+    width: 230px;
+    height: 50%;
+    cursor: pointer;
+    background: #0000001a;
+
+    transition: transform 0.3s;
+    overflow: hidden;
+    border: 1px solid transparent;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      transition: all 1s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__info {
+    max-width: 400px;
+    height: 100%;
+    & > * {
+      padding: 0.625rem 0;
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+
+  &__size-stock {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.625rem;
+    &__change {
+      font-size: 1.625rem;
+      cursor: pointer;
+    }
+  }
+
+  &__add-to-cart {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all ease 0.4s;
+    width: 12rem;
+    &:hover {
+      background-color: #1f1d1d;
+    }
+    .button-custom {
+      color: #fff;
+    }
+  }
+  &__stars {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fa7d0b;
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  &__wishlist {
+    border: 1px solid #000;
+    padding: 10px;
+    svg {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__size {
+    display: flex;
+    align-items: center;
+    gap: 1.625rem;
+  }
+}

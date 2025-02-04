@@ -1,3 +1,4 @@
+import mockProductCardTypeData from "../../../../mock/mockProductCardTypeData";
 import ProductList from "../../product-list";
 import "./index.scss";
 
@@ -14,7 +15,7 @@ export default function HomepageBestSeller() {
         </div>
       </div>
       <div className="homepage__bestseller__body">
-        <ProductList />
+        <ProductList list={mockProductCardTypeData} />
       </div>
     </div>
   );

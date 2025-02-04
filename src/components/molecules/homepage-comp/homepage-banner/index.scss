@@ -51,11 +51,12 @@
       &__sports {
         text-align: center;
         position: relative;
-        width: 100%;
+        width: fit-content;
         height: auto;
+
         text {
           width: 100%;
-          font-size: 200px;
+          font-size: clamp(100px, 10vw, 200px);
           font-weight: 800;
           line-height: 200px;
           text-transform: uppercase;

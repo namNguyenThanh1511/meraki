@@ -7,6 +7,9 @@ export interface ButtonComponentProps {
   width?: string | number;
   height?: string | number;
   textColour?: string;
+  className?: string;
+  borderRadius?: string;
+  border?: string;
 }
 
 export default function ButtonComponent({
@@ -16,10 +19,13 @@ export default function ButtonComponent({
   width,
   height,
   textColour,
+  className = "",
+  borderRadius,
+  border = "",
 }: ButtonComponentProps) {
   return (
     <div
-      className="button-wrapper meraki-Btn"
+      className={`button-wrapper meraki-Btn ${className.length > 0 ? className : ""}`}
       style={
         {
           "--bgColour": bgColour,
@@ -27,6 +33,8 @@ export default function ButtonComponent({
           "--width": width,
           "--height": height,
           "--colour": textColour,
+          "--borderRadiusCustom": borderRadius,
+          "--border": border,
         } as React.CSSProperties
       }
     >

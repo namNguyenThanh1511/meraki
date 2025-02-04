@@ -1,0 +1,123 @@
+.horizontal-product-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+
+  background-color: #fff;
+  &__image {
+    flex: 1;
+    &__img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  &__details {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-right: 2px solid #9c9c9c;
+    gap: 10px;
+    & > * {
+      padding: 10px 0;
+    }
+
+    &__category {
+      font-size: 14px;
+      color: orange;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    &__name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fa7d0b;
+    }
+
+    &__description {
+      font-size: 14px;
+      color: #666;
+    }
+
+    &__features {
+      list-style: disc;
+      padding-left: 20px;
+      font-size: 14px;
+      color: #555;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__actions {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &__price {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      &--original {
+        font-weight: 400;
+        opacity: 0.4;
+        text-decoration: line-through;
+      }
+    }
+
+    &__rating {
+      font-size: 14px;
+      color: orange;
+
+      span {
+        font-size: 12px;
+        color: #555;
+      }
+    }
+
+    &__stock {
+      font-size: 14px;
+      color: green;
+    }
+
+    &__add-to-cart {
+      width: 100%;
+      padding: 10px;
+      background-color: #3e3e3e;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      padding: 10px 50px;
+      &:hover {
+        background-color: #fa7d0b;
+      }
+    }
+
+    &__items {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      button {
+        color: #ffff !important;
+      }
+    }
+    &__icons {
+      background-color: #ffff;
+      border: 1px black solid;
+      padding: 5px 5px;
+      svg {
+        display: flex;
+      }
+    }
+  }
+}

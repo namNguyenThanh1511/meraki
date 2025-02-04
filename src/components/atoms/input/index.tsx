@@ -10,6 +10,8 @@ interface InputComponentProps extends InputProps {
   shape?: "round" | "primary" | "square";
   borderColor?: string;
   onInnerButtonTxt?: string;
+  padding?: string;
+  opacity?: number | string;
 }
 
 // Component chính
@@ -20,6 +22,8 @@ function InputComponent({
   width,
   height,
   borderColor,
+  padding = "",
+  opacity = 1,
   ...rest
 }: InputComponentProps) {
   return (
@@ -33,6 +37,8 @@ function InputComponent({
           "--width": width,
           "--height": height,
           "--border-color": borderColor,
+          "--padding": padding,
+          "--opacity": opacity,
         } as CSSProperties
       }
     />
@@ -46,6 +52,9 @@ InputComponent.Password = ({
   width,
   height,
   shape = "primary",
+  borderColor,
+  padding = "",
+  opacity = 1,
   ...rest
 }: InputComponentProps) => (
   <Input.Password
@@ -54,9 +63,12 @@ InputComponent.Password = ({
     style={
       {
         "--bg-color": bgColor,
-        "--border-radius": shape === "primary" ? "6px" : "15px",
+        "--border-radius": shape === "primary" ? "6px" : shape === "round" ? "15px" : "0px",
         "--width": width,
         "--height": height,
+        "--border-color": borderColor,
+        "--padding": padding,
+        "--opacity": opacity,
       } as CSSProperties
     }
   />

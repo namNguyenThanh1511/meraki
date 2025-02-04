@@ -25,7 +25,11 @@ export default function HomePageBanner() {
             </ButtonComponent>
           </div>
           <div className="homepage__banner__content__right">
-            <svg className="homepage__banner__content__right__sports" viewBox="0 0 500 400">
+            <svg
+              className="homepage__banner__content__right__sports"
+              viewBox="0 0 500 400"
+              preserveAspectRatio="xMidYMid meet"
+            >
               <defs>
                 <linearGradient id="gradient" gradientTransform="rotate(90)">
                   <stop offset="0%" stop-color="#ff7a00" />
@@ -35,7 +39,7 @@ export default function HomePageBanner() {
               <text
                 x="0"
                 y="150"
-                font-size="200"
+                font-size="400"
                 font-weight="bold"
                 fill="none"
                 stroke="url(#gradient)"

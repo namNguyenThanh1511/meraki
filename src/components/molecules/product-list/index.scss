@@ -1,47 +1,109 @@
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  & > * {
-    flex: calc(25% - 20px);
-    width: calc(25% - 20px);
-    & > * {
-      width: calc(100%);
-    }
+  gap: 1rem;
+
+  &__wrapper {
+    margin: 30px 0;
+    // padding: 0 20px;
   }
-  &__pagination {
+  &__header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 0;
-    & > * {
-      flex: 0 0 2%;
-      cursor: pointer;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    &__count {
+      flex: 2;
     }
-    &__item {
-      background-color: #fff;
-      color: black;
-      padding: 2px 10px;
-      margin: 0 5px;
+    &__sort {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .custom-border {
+        position: relative;
+      }
+      .custom-border::before {
+        content: " ";
+        position: absolute;
+        border-left: 3px #fa7d0b solid;
+        top: 0;
+        right: -10px; /* Change direction for a different side*/
+        height: 100%;
+      }
+      &__item {
+        cursor: pointer;
+        font-weight: 700;
+      }
     }
-    .active {
-      background-color: #3c3d3d;
+  }
+
+  &.grid-view {
+    flex-direction: row;
+
+    .product-list__item {
+      width: calc(25% - 1rem); // Hiển thị 4 sản phẩm mỗi hàng
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+
+  &.list-view {
+    flex-direction: column;
+
+    .product-list__item {
+      width: 100%; // Chiếm toàn bộ chiều rộng cho List View
+    }
+  }
+}
+
+.product-list__view-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  .toggle-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+
+    // &.active {
+    //   color: black;
+    // }
+  }
+  svg {
+    max-height: 1.25rem;
+  }
+}
+
+.product-list__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+
+  .product-list__pagination__arrow {
+    cursor: pointer;
+    margin: 0 1rem;
+    &.disable {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  .product-list__pagination__item {
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: 0 0.25rem;
+    border: 1px solid #ddd;
+    width: 30px;
+    text-align: center;
+    &.active {
+      background-color: black;
       color: #fff;
-      text-align: center;
-    }
-    &__arrow {
-      font-size: 14px;
-
-      &.disable {
-        opacity: 0.5;
-        cursor: not-allowed;
-      }
-
-      &:not(.disable):hover {
-        opacity: 0.8;
-      }
     }
   }
 }

@@ -5,11 +5,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import ProductCard from "../../card";
 
-import { ProductCardType } from "../../../../model/product";
+import { Product } from "../../../../model/product";
 import CardBlog from "../../card-blog";
 import { BlogCardType } from "../../../../model/blog";
 export interface CarouselProps {
-  items: ProductCardType[] | BlogCardType[];
+  items: Product[] | BlogCardType[];
   cardType?: "product" | "blog";
 }
 const Carousel = ({ items, cardType }: CarouselProps) => {
@@ -21,7 +21,11 @@ const Carousel = ({ items, cardType }: CarouselProps) => {
     >
       {items.map((item, index) => (
         <SwiperSlide key={index}>
-          {cardType === "product" ? <ProductCard item={item as ProductCardType} /> : <CardBlog item={item as BlogCardType} />}
+          {cardType === "product" ? (
+            <ProductCard item={item as Product} />
+          ) : (
+            <CardBlog item={item as BlogCardType} />
+          )}
         </SwiperSlide>
       ))}
     </Swiper>

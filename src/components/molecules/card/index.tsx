@@ -2,9 +2,9 @@ import "./index.scss";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { IoShareSocial, IoShareSocialOutline } from "react-icons/io5";
 import { MdOutlineZoomInMap, MdOutlineZoomOutMap } from "react-icons/md";
-import { ProductCardType } from "../../../model/product";
+import { Product } from "../../../model/product";
 export interface ProductCardProps {
-  item: ProductCardType;
+  item: Product;
 }
 export default function ProductCard({ item }: ProductCardProps) {
   const actions = [
@@ -35,7 +35,7 @@ export default function ProductCard({ item }: ProductCardProps) {
           ))}
         </div>
         <div className="product-card__backdrop__overlay"></div>
-        <img src={item.imgUrl} alt="" />
+        <img src={item.image} alt="" />
         <div className="product-card__add-to-cart">Add to cart</div>
         <div
           className={`${
@@ -53,7 +53,7 @@ export default function ProductCard({ item }: ProductCardProps) {
         </div>
         <div className="product-card__price__wrapper">
           <div className="product-card__info__discounted-price">
-            ${item.price - item.price * (item.discount / 100)}
+            ${(item.price - item.price * (item.discount / 100)).toFixed(2)}
           </div>
           <div
             className={`${

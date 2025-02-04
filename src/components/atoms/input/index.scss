@@ -8,4 +8,6 @@
   width: var(--width, 100%);
   height: var(--height);
   border-color: var(--border-color) !important;
+  padding: var(--padding, 4px 11px) !important;
+  opacity: var(--opacity, 1);
 }

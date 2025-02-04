@@ -1,0 +1,13 @@
+.adminProductPageWrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  &__item {
+    flex: calc(100% / 4 - 10px);
+    & > * {
+      width: calc(100%);
+    }
+  }
+}

@@ -22,6 +22,11 @@ import blog2 from "../../public/blog-2.jpg";
 import blog3 from "../../public/blog-3.jpg";
 import blog4 from "../../public/blog-4.jpg";
 
+import google from "../../public/Google__G__logo.svg.png";
+
+import detailsPiece from "../../public/details-shoe-piece1.jpg";
+import detailsPiece2 from "../../public/details-shoes-piece2.jpg";
+
 export const mainLogo = logoMeraki;
 export const mainFooterBackdrop = footerBackdrop;
 export const banner = homepageBanner;
@@ -49,6 +54,11 @@ export const blogOne = blog1;
 export const blogTwo = blog2;
 export const blogThree = blog3;
 export const blogFour = blog4;
+
+export const googleLogo = google;
+
+export const detailsPieceImg = detailsPiece;
+export const detailsPieceImg2 = detailsPiece2;
 
 export const navbar = [
   {

@@ -1,0 +1,47 @@
+.sign-in {
+  width: 100%;
+  padding: 0 240px;
+  &__title {
+    font-size: 30px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .form-button-center {
+    margin-top: 20px;
+    button {
+      font-size: 20px;
+      font-weight: 800;
+    }
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  .button-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  &__or {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    &__line {
+      flex: 1; /* Đường thẳng chiếm hết không gian còn lại */
+      height: 1px; /* Độ dày của đường thẳng */
+      background-color: #00000066; /* Màu sắc của đường thẳng */
+    }
+    &__text {
+      padding: 0 10px; /* Khoảng cách giữa chữ "Or" và các đường thẳng */
+      font-size: 14px;
+      color: #00000099;
+      text-align: center;
+    }
+  }
+}

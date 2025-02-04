@@ -2,10 +2,10 @@ import { useState } from "react";
 import "./index.scss";
 import Carousel from "../../swiper/carousel";
 import mockProductCardTypeData from "../../../../mock/mockProductCardTypeData";
-import { ProductCardType } from "../../../../model/product";
+import { Product } from "../../../../model/product";
 export default function HomepageFeature() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  const [filteredData, setFilteredData] = useState<ProductCardType[]>(mockProductCardTypeData);
+  const [filteredData, setFilteredData] = useState<Product[]>(mockProductCardTypeData);
   const category = [
     {
       title: "All",
@@ -30,9 +30,7 @@ export default function HomepageFeature() {
       setFilteredData(mockProductCardTypeData);
     } else {
       setFilteredData(
-        mockProductCardTypeData.filter(
-          (x: ProductCardType) => x.category.toLowerCase() === category
-        )
+        mockProductCardTypeData.filter((x: Product) => x.category.toLowerCase() === category)
       );
     }
   };
@@ -57,7 +55,6 @@ export default function HomepageFeature() {
         </div>
       </div>
       <div className="homepage__featured__items">
-        {/* <ProductCard /> */}
         <Carousel cardType="product" items={filteredData} />
       </div>
     </div>
