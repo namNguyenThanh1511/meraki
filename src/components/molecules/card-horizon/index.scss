@@ -71,6 +71,10 @@
         opacity: 0.4;
         text-decoration: line-through;
       }
+      & > * {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     &__rating {

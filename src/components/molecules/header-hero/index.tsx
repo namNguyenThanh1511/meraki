@@ -24,13 +24,13 @@ function Hero() {
           <span>
             <UserOutlined />
           </span>
-          <span>Sign in</span>
+          <Link to={"auth/sign-in"}>Sign in</Link>
         </div>
         <div className="navbar__actions__cart">
           <span>
             <LuShoppingCart />
           </span>
-          <span>Cart</span>
+          <Link to={"cart"}>Cart</Link>
         </div>
       </div>
     </div>

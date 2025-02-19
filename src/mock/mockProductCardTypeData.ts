@@ -7,6 +7,7 @@ const mockProductCardTypeData: Product[] = [
     id: 1,
     name: "Sneaker UltraBoost",
     category: "Shoes",
+    brand: "Nike",
     description: "High-performance running shoes with a stylish design.",
     price: 120.99,
     rating: 4.5,
@@ -23,6 +24,7 @@ const mockProductCardTypeData: Product[] = [
     id: 2,
     name: "Smartphone Galaxy Z",
     category: "Apparel",
+    brand: "Puma",
     description: "Next-gen foldable smartphone with powerful features.",
     price: 999.99,
     rating: 4.8,
@@ -39,6 +41,7 @@ const mockProductCardTypeData: Product[] = [
     id: 3,
     name: "Wireless Headphones Pro",
     category: "Equipment",
+    brand: "Adidas",
     description: "Premium headphones with noise cancellation.",
     price: 199.99,
     rating: 4.7,
@@ -55,6 +58,7 @@ const mockProductCardTypeData: Product[] = [
     id: 4,
     name: "Gaming Keyboard RGB",
     category: "Shoes",
+    brand: "Reebok",
     description: "Mechanical keyboard with customizable RGB lighting.",
     price: 89.99,
     rating: 4.3,
@@ -71,6 +75,7 @@ const mockProductCardTypeData: Product[] = [
     id: 5,
     name: "Classic Leather Jacket",
     category: "Apparel",
+    brand: "New Balance",
     description: "Timeless leather jacket for a rugged and stylish look.",
     price: 150.99,
     rating: 4.6,
@@ -87,6 +92,7 @@ const mockProductCardTypeData: Product[] = [
     id: 6,
     name: "Electric Mountain Bike",
     category: "Equipment",
+    brand: "Nike",
     description: "All-terrain e-bike with powerful motor and long battery life.",
     price: 1200.0,
     rating: 4.9,
@@ -103,6 +109,7 @@ const mockProductCardTypeData: Product[] = [
     id: 7,
     name: "Ultra HD 4K TV",
     category: "Shoes",
+    brand: "Skechers",
     description: "Crystal-clear 4K display with smart TV functionality.",
     price: 499.99,
     rating: 4.4,
@@ -119,6 +126,7 @@ const mockProductCardTypeData: Product[] = [
     id: 8,
     name: "Yoga Mat Premium",
     category: "Apparel",
+    brand: "Nike",
     description: "High-quality yoga mat with non-slip surface.",
     price: 29.99,
     rating: 4.5,
@@ -135,6 +143,7 @@ const mockProductCardTypeData: Product[] = [
     id: 9,
     name: "Digital Watch",
     category: "Equipment",
+    brand: "Reebok",
     description: "Stylish digital watch with multiple features.",
     price: 49.99,
     rating: 4.2,
@@ -151,6 +160,7 @@ const mockProductCardTypeData: Product[] = [
     id: 10,
     name: "Office Chair Ergonomic",
     category: "Equipment",
+    brand: "New Balance",
     description: "Comfortable ergonomic chair for long hours of work.",
     price: 199.99,
     rating: 4.8,
@@ -213,6 +223,27 @@ export const mockCartItems = [
     type: "Size L, White",
     price: 19.99,
     quantity: 3,
+  },
+];
+
+export const sizeList = [
+  {
+    name: "39",
+  },
+  {
+    name: "40",
+  },
+  {
+    name: "41",
+  },
+  {
+    name: "42",
+  },
+  {
+    name: "43",
+  },
+  {
+    name: "44",
   },
 ];
 

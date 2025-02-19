@@ -5,6 +5,8 @@ import ButtonComponent from "../../atoms/button";
 import "./index.scss";
 import { Product } from "../../../model/product";
 import { useState } from "react";
+import TextSubstring from "../../atoms/TextSubstring";
+import Price from "../../atoms/price";
 
 type HorizontalProductCardProps = {
   item: Product;
@@ -28,7 +30,12 @@ export default function HorizontalProductCard({ item }: HorizontalProductCardPro
       {/* Product Details */}
       <div className="horizontal-product-card__details">
         <div className="horizontal-product-card__details__category">{item.category}</div>
-        <div className="horizontal-product-card__details__name">{item.name}</div>
+        <TextSubstring
+          str={item.name}
+          limit={30}
+          className="horizontal-product-card__details__name"
+        />
+
         <div className="horizontal-product-card__details__description">{item.description}</div>
         <ul className="horizontal-product-card__details__features">
           <li>Available in {item.colorsAvailable} colors</li>
@@ -40,7 +47,7 @@ export default function HorizontalProductCard({ item }: HorizontalProductCardPro
 
       {/* Product Actions */}
       <div className="horizontal-product-card__actions">
-        <div className="horizontal-product-card__actions__price">
+        {/* <div className="horizontal-product-card__actions__price">
           {item.discount > 0 ? (
             <>
               <div className="horizontal-product-card__actions__price--discounted">
@@ -53,7 +60,13 @@ export default function HorizontalProductCard({ item }: HorizontalProductCardPro
           ) : (
             <div className="horizontal-product-card__actions__price">${item.price.toFixed(2)}</div>
           )}
-        </div>
+        </div> */}
+        {/* <div className="horizontal-product-card__actions__price">${item.price.toFixed(2)}</div> */}
+        <Price
+          price={item.price}
+          saleOff={item.discount}
+          className="horizontal-product-card__actions__price"
+        />
         <div className="horizontal-product-card__actions__rating">
           {"★".repeat(Math.round(item.rating))}
           {"☆".repeat(5 - Math.round(item.rating))}

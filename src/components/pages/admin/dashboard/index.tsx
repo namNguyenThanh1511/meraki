@@ -3,7 +3,6 @@ import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 import { ShoppingOutlined, MoreOutlined } from "@ant-design/icons";
 import "./index.scss";
 
-
 import { useNavigate } from "react-router-dom";
 import GenericTable, { ColumnType } from "../../../atoms/table";
 import { Order, OrderStatus } from "../../../../model/order";
@@ -98,7 +97,7 @@ function Dashboard() {
       },
     },
     {
-      title: "Tổng tiền",
+      title: "Amount",
       dataIndex: "total",
       key: "total",
     },

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.scss";
 import { FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -19,11 +19,20 @@ export interface CartItem {
 
 const ShoppingCart: React.FC = () => {
   const cart = useSelector((state: RootState) => state.cart);
-  const dispatch = useDispatch();
-  const total = cart.products.reduce(
-    (sum: number, item: CartItem) => sum + item.price * item.quantity,
-    0
+  const [checkedItems, setCheckedItems] = useState<number[]>(
+    cart.products.map((item: CartItem) => item.id)
   );
+  const handleCheckboxChange = (id: number) => {
+    setCheckedItems((prevChecked) =>
+      prevChecked.includes(id) ? prevChecked.filter((item) => item !== id) : [...prevChecked, id]
+    );
+  };
+
+  const dispatch = useDispatch();
+  // Tính tổng dựa trên sản phẩm được chọn
+  const total = cart.products
+    .filter((item: CartItem) => checkedItems.includes(item.id))
+    .reduce((sum: number, item: CartItem) => sum + item.price * item.quantity, 0);
   const handleIncrement = (product: CartItem) => {
     dispatch(changeQuantity({ id: product.id, quantity: product.quantity + 1 }));
   };
@@ -57,7 +66,11 @@ const ShoppingCart: React.FC = () => {
               {cart.products.map((item: CartItem) => (
                 <tr key={item.id}>
                   <td>
-                    <input type="checkbox" defaultChecked />
+                    <input
+                      type="checkbox"
+                      checked={checkedItems.includes(item.id)}
+                      onChange={() => handleCheckboxChange(item.id)}
+                    />
                   </td>
                   <td className="shopping-cart__product">
                     <img src={item.image} alt={item.name} />
@@ -104,7 +117,9 @@ const ShoppingCart: React.FC = () => {
             <div className="shopping-cart__total">
               <span>Total ({cart.products.length} items): </span>
               <strong>${total.toFixed(2)}</strong>
-              <button className="shopping-cart__checkout">Checkout →</button>
+              <Link to={"checkout"}>
+                <button className="shopping-cart__checkout">Checkout →</button>
+              </Link>
             </div>
           </div>
         </div>

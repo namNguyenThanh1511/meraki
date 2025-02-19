@@ -12,6 +12,7 @@ export interface Product {
   id: number; // Unique identifier
   name: string; // Tên sản phẩm
   category: string; // Danh mục sản phẩm
+  brand?: string;
   description: string; // Mô tả sản phẩm
   price: number; // Giá sản phẩm
   rating: number; // Điểm đánh giá

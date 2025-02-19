@@ -113,6 +113,7 @@ const Checkout: React.FC = () => {
                 <img src={item.image} alt="product" />
               </div>
               <div className="order-item__info">
+                
                 <p>{item.name.length > 20 ? item.name.substring(0, 20) + "..." : item.name}</p>
                 <span>{item.type}</span>
               </div>
@@ -129,7 +130,7 @@ const Checkout: React.FC = () => {
             Subtotal: <span>$78</span>
           </p>
           <p>
-            Shipping Fees: <span>$5</span>
+            Shipping Fees: <span>${selectedShip.cost}</span>
           </p>
         </div>
         <div>

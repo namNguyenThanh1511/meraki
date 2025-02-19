@@ -14,6 +14,7 @@ import Dashboard from "../components/pages/admin/dashboard";
 import { mockAdminRouteData } from "../model/route";
 
 import AdminProductsPage from "../components/pages/admin/products";
+import AdminOrders from "../components/pages/admin/orders";
 
 export const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ export const router = createBrowserRouter([
         element: <ProductsPage />,
       },
       {
-        path: "products/details",
+        path: "products/:id",
         element: <ProductDetails {...mockProductData} />,
       },
       {
@@ -37,7 +38,7 @@ export const router = createBrowserRouter([
         element: <ShoppingCart />,
       },
       {
-        path: "checkout",
+        path: "cart/checkout",
         element: <Checkout />,
       },
     ],
@@ -56,7 +57,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "orders",
-        element: <Dashboard />,
+        element: <AdminOrders />,
       },
     ],
   },

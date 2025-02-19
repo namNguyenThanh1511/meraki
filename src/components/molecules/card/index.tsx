@@ -3,10 +3,14 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { IoShareSocial, IoShareSocialOutline } from "react-icons/io5";
 import { MdOutlineZoomInMap, MdOutlineZoomOutMap } from "react-icons/md";
 import { Product } from "../../../model/product";
+import { useNavigate } from "react-router-dom";
+import TextSubstring from "../../atoms/TextSubstring";
+import Price from "../../atoms/price";
 export interface ProductCardProps {
   item: Product;
 }
 export default function ProductCard({ item }: ProductCardProps) {
+  const navigate = useNavigate();
   const actions = [
     {
       name: "favorite",
@@ -25,7 +29,12 @@ export default function ProductCard({ item }: ProductCardProps) {
     },
   ];
   return (
-    <div className="product-card">
+    <div
+      onClick={() => {
+        navigate(`products/${item.id}`);
+      }}
+      className="product-card"
+    >
       <div className="product-card__backdrop">
         <div className="product-card__actions">
           {actions.map((item, index) => (
@@ -48,11 +57,9 @@ export default function ProductCard({ item }: ProductCardProps) {
 
       <div className="product-card__info">
         <div className="product-card__info__title">{item.category}</div>
-        <div className="product-card__info__name">
-          {item.name.length > 15 ? item.name.substring(0, 15) + "..." : item.name}
-        </div>
+        <TextSubstring str={item.name} limit={30} className="product-card__info__name" />
         <div className="product-card__price__wrapper">
-          <div className="product-card__info__discounted-price">
+          {/* <div className="product-card__info__discounted-price">
             ${(item.price - item.price * (item.discount / 100)).toFixed(2)}
           </div>
           <div
@@ -63,7 +70,8 @@ export default function ProductCard({ item }: ProductCardProps) {
             }`}
           >
             ${item.price}
-          </div>
+          </div> */}
+          <Price price={item.price} saleOff={item.discount} />
         </div>
       </div>
     </div>

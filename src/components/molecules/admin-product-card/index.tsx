@@ -3,6 +3,8 @@ import styles from "./AdminProductCard.module.scss";
 import { FaArrowUp } from "react-icons/fa";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { Product } from "../../../model/product";
+import Price from "../../atoms/price";
+import TextSubstring from "../../atoms/TextSubstring";
 
 interface ProductProps {
   item: Product;
@@ -15,11 +17,14 @@ const AdminProductCard: React.FC<ProductProps> = ({ item }) => {
       <div className={styles.header}>
         <img src={item.image} alt={item.name} className={styles.image} />
         <div className={styles.info}>
-          <h2 className={styles.name}>
+          {/* <h2 className={styles.name}>
             {item.name.length > 20 ? item.name.substring(0, 20) + "..." : item.name}
-          </h2>
+          </h2> */}
+          <TextSubstring str={item.name} limit={20} className={styles.name} />
           <p className={styles.category}>{item.category}</p>
-          <p className={styles.price}>${item.price.toFixed(2)}</p>
+          <p className={styles.price}>
+            <Price price={item.price} saleOff={item.discount} />
+          </p>
         </div>
         <HiDotsHorizontal className={styles.moreIcon} />
       </div>
